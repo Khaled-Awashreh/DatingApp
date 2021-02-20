@@ -67,9 +67,9 @@ namespace API.Controllers
             {
                 Username = user.Username,
                 Token = _tokenService.CreateToken(user)
-        };
+             };
 
-        }
+     }
 
 
 
@@ -77,7 +77,7 @@ namespace API.Controllers
 
         private async Task<bool> UserExists(string username)
         {
-            return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
+                return await _context.Users.AnyAsync(x => x.Username == username.ToLower());
         }
 
     }
